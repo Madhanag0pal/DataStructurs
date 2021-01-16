@@ -1,0 +1,59 @@
+/*
+Data member
+  Node *head
+  int len
+
+Costructures
+  List() -> head =NULL,len=0
+  List(int arr[],int s)
+
+Member Function
+  int len()  // returns length of the list
+  void display() //prints the list
+  void append(int n) // inserts n at end of the list
+  int pop(int i)  //returns last element of the list
+
+Disructor
+  ~List() //clear memory
+*/
+
+
+
+class Node{
+  int data;
+  Node* nextAddress;
+
+public:
+  Node(Node*n){
+    data=0;
+    nextAddress=n;
+  }
+  Node(int v = 0,Node*n = NULL){
+    data=v;
+    nextAddress=n;
+  }
+
+  //returns value fo the node
+  int get(){
+     return data;
+  }
+
+  //sets value of the node
+  void set(int n){
+    data = n;
+  }
+
+  //returns next node address
+  Node* next(){
+    return nextAddress;
+  }
+
+  //links with the given node
+  void link(Node*n){
+    nextAddress = n;
+  }
+
+  ~Node(){
+    //cout << data << '\t';
+  }
+};
