@@ -1,20 +1,19 @@
-/*
+/*Summary
 Data member
-  Node *head
-  int len
+  int data
+  Node *nextAddress
 
 Costructures
-  List() -> head =NULL,len=0
-  List(int arr[],int s)
+  Node() -> data=0,nextAddress=NULL
+  Node(int v) -> data=v,nextAddress=NULL
+  Node(Node* n) -> data=0,nextAddress=n
+  Node(int v,Node* n) -> data=v,nextAddress=n
 
 Member Function
-  int len()  // returns length of the list
-  void display() //prints the list
-  void append(int n) // inserts n at end of the list
-  int pop(int i)  //returns last element of the list
-
-Disructor
-  ~List() //clear memory
+  int <- get() //returns value fo the node 
+  void <- set(int n) //sets value of the node
+  Node* <- next() //returns next node address
+  void <- link(Node*n) //links with the given node
 */
 
 

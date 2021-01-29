@@ -1,20 +1,23 @@
-/*
+/*Summary
 Data Members
   Node *head
   int len
 
 Costructures
   List() -> head =NULL,len=0
-  List(int arr[],int s)
+  List(int[],int) -> creats an list and sets the length
 
 Member Function
-  int len()  // returns length of the list
-  void display() //prints the list
-  void append(int n) // inserts n at end of the list
-  int pop(int i)  //returns last element of the list
-
+  int <- len()  // returns length of the list
+  void <- display() //prints the list
+  void <- append(int n) // inserts n at end of the list
+  int <- pop(int i)  //returns the element at index i of the list
+  int <- pop()  //returns last element of the list
+  void <- clear() //deletes all nodes in the list
 Disructor
   ~List() //clear all Node in the 
+  --------------------------------------------
+  
 */
 
 
@@ -35,6 +38,7 @@ public:
     l = s;
     Node *curr = head;
     for(int i=1;i<s;i++){
+
       curr->link(new Node(arr[i]));
       curr = curr->next();
     }
@@ -61,6 +65,7 @@ public:
   int pop(){
     return pop(l);
   }
+
   int pop(int i){
     if(i < l){
       Node* temp = head;
@@ -80,13 +85,17 @@ public:
     return n;
   }
   
-
-  //clear memory
-  ~List(){
+  //deletes all nodes in the list
+  void clear(){
     while(head != NULL){
       Node *temp = head->next();
       delete head;
       head = temp;
     }
+  }
+
+  //clear memory
+  ~List(){
+    clear();
   }
 };
