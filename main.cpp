@@ -1,7 +1,6 @@
 #include <iostream>
+#include "Singly Linked List /SlList"
 using namespace std;
-#include <list>
-class List:
 
 int main(){
 

@@ -78,11 +78,12 @@ public:
       temp->link(x->next());
       delete x;
       l--;
+      return n;
     }
     else{
       cout << "Index out of bund\n";
+      exit(0);
     }
-    return n;
   }
   
   //deletes all nodes in the list
