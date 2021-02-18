@@ -1,4 +1,4 @@
-/*
+/* Summary
 Data member
 int data;
 Node *pre,*next;
@@ -18,6 +18,9 @@ Member function
   void linkNext(Node*n) //links next node with the given node
   void linkPre(Node*n) //links pre node with the given node  
 */
+
+#include<iostream>
+using namespace std;
 
 class Node{
   int data;
@@ -70,6 +73,6 @@ public:
   }
 
   ~Node(){
-    cout << data << '\t';
+    // cout << data << "\t";
   }
 };

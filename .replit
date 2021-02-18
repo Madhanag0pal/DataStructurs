@@ -1,0 +1,1 @@
+run = "clear \n g++ main.cpp -o main\n ./main"

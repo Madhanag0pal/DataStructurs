@@ -55,21 +55,3 @@ class binaryTree{
 		}
 
 };
-
-/*
-int main(){
-	// binaryTree b;
-	// int i = 1; 
-	// while(i != 0){
-	// 	cin >> i;
-	// 	b.insert(i);  
-	// }
-	node *n = new node(7),*l = new node(5),*r = new node(9);
-	cout << sizeof(n)<<endl;
-	n->setRight(r);
-	n->show();
-	delete n;
-	delete l;
-	delete r;
-}
-*/

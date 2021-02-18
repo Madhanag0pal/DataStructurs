@@ -16,7 +16,7 @@ Member Function
   void <- link(Node*n) //links with the given node
 */
 
-
+#include <iostream>
 
 class Node{
   int data;

@@ -20,8 +20,8 @@ Disructor
   
 */
 
-
-#include "SlNode"
+#include<iostream>
+#include "SlNode.cpp"
 using namespace std;
 
 class List{
@@ -95,6 +95,21 @@ public:
     }
   }
 
+  template<size_t s>
+  void operator () (const int (&arr)[s]){
+    head = new Node(arr[0]);
+    l = s;
+    Node *curr = head;
+    for(int i=1;i<s;i++){
+      curr->link(new Node(arr[i]));
+      curr = curr->next();
+    }
+  }
+
+  friend ostream& operator << (ostream &print,List &l){
+    l.display();
+    return print;
+  }
   //clear memory
   ~List(){
     clear();
